@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    animation: colorChange 5s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    padding: 2.5rem;
+    background-color: black;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: red;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 300px;
+    background-color: gray;
+    color: white;
+    transition: padding-top 0.3s;
+}
+
+p {
+    width: 70%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+p::before {
+    content: "\201C"; 
+    font-size: 2rem;
+    color: #007bff;
+}
+
+p::after {
+    content: "\201D"; 
+    font-size: 2rem;
+    color: #007bff;
+}
+
+p:hover {
+    color: #007bff; 
+}
+
+@keyframes colorChange {
+    0% { background-color: #dfc4c4; }
+    50% { background-color: #bb8787; }
+    100% { background-color: #f0f0f0; }
+}
